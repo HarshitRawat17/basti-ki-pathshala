@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basti ki Pathshala - NGO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-blue: #274472;
+      --soft-orange: #ffb566;
+      --light-cream: #fff9f2;
+      --teal-green: #2db995;
+      --charcoal: #343a40;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--light-cream);
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--deep-blue);
+      color: var(--light-cream);
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+    .brand { font-family: 'Montserrat', sans-serif; font-size: 2rem; letter-spacing: 2px; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--light-cream);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--soft-orange); }
+    .hero {
+      background: linear-gradient(100deg, var(--teal-green), var(--deep-blue) 70%);
+      color: var(--light-cream);
+      text-align: center;
+      padding: 4rem 2rem 2rem 2rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 1.2px;
+    }
+    .hero .cta-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--soft-orange);
+      color: var(--deep-blue);
+      font-weight: bold;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 35px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .hero .cta-btn:hover {
+      background: var(--teal-green);
+      color: var(--light-cream);
+    }
+    section {
+      max-width: 900px;
+      margin: 2.2rem auto;
+      background: var(--light-cream);
+      border-radius: 18px;
+      box-shadow: 0 3px 14px rgba(39,68,114,0.045);
+      padding: 2.2rem 1.3rem;
+    }
+    h2 {
+      color: var(--deep-blue);
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1.2rem;
+      font-size: 2rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .about p, .about ul { font-size: 1.12rem; }
+    .about ul {
+      margin: 1rem 0 1rem 2rem;
+      list-style: disc inside;
+    }
+    .about li { margin-bottom: 0.7rem; }
+    form {
+      background: var(--light-cream);
+      padding: 1.3rem 1.3rem 0.6rem 1.3rem;
+      border-radius: 15px;
+      border: 1.5px solid var(--soft-orange);
+      max-width: 470px;
+      margin: 0 auto;
+      box-shadow: 0 2px 8px rgba(39, 68, 114, 0.05);
+    }
+    .form-group {
+      margin-bottom: 1.2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      font-weight: bold;
+      font-size: 1.07rem;
+      margin-bottom: 0.35rem;
+    }
+    input, textarea {
+      padding: 0.65rem;
+      border-radius: 8px;
+      border: 1.5px solid var(--teal-green);
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      background: #fff;
+      resize: vertical;
+      font-family: inherit;
+    }
+    textarea { min-height: 74px; }
+    button[type="submit"] {
+      background: var(--soft-orange);
+      color: var(--deep-blue);
+      font-weight: bold;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 35px;
+      font-size: 1.08rem;
+      cursor: pointer;
+      margin: 1rem 0 1rem 0;
+      transition: background 0.2s, color 0.2s;
+    }
+    button[type="submit"]:hover {
+      background: var(--teal-green);
+      color: var(--light-cream);
+    }
+    footer {
+      background: var(--charcoal);
+      color: var(--soft-orange);
+      text-align: center;
+      padding: 1rem 0 1rem 0;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      font-size: 1.06rem;
+    }
+    /* Responsive Styles */
+    @media (max-width: 650px) {
+      nav {
+        flex-direction: column;
+        padding: 0.7rem;
+      }
+      .nav-links { margin-top: 0.7rem; gap: 1rem; }
+      .brand { font-size: 1.45rem; }
+      .hero h1 { font-size: 2rem; }
+      section, form { padding: 1.15rem 0.5rem; }
+    }
+    @media (max-width: 430px) {
+      .about ul { margin-left: 1rem; }
+      label, input, textarea, button[type="submit"] { font-size: 0.99rem; }
+      footer { font-size: 0.98rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header and Navbar -->
+  <header>
+    <nav>
+      <span class="brand">Basti ki Pathshala</span>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#volunteer">Volunteer</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Home / Hero Section -->
+  <section class="hero" id="home">
+    <h1>Basti ki Pathshala</h1>
+    <p style="font-size:1.2rem;max-width:600px;margin:0 auto;">Empowering the curious minds of bastis—one lesson at a time.</p>
+    <a href="#volunteer" class="cta-btn">Become a Volunteer</a>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      <strong>Basti ki Pathshala</strong> is a grassroots NGO dedicated to making quality education accessible for children living in underprivileged slum areas (bastis) in India.
+    </p>
+    <p>
+      Our journey began with a few passionate volunteers and a handful of curious children gathering beneath a tree. Today, we conduct open classrooms in multiple neighborhoods, creating safe and joyful learning spaces.
+    </p>
+    <ul>
+      <li>After-school teaching in Maths, Science, Languages, and Arts</li>
+      <li>Awareness sessions on hygiene, life skills, and social values</li>
+      <li>Community events: festivals, parent meetings, and more</li>
+    </ul>
+    <p>
+      We believe every child deserves a chance to learn and dream. Be a part of our mission—let’s build brighter futures together!
+    </p>
+  </section>
+
+  <!-- Volunteer Form Section -->
+  <section id="volunteer">
+    <h2>Volunteer With Us</h2>
+    <form action="#" method="post" autocomplete="off">
+      <div class="form-group">
+        <label for="name">Full Name*</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address*</label>
+        <input type="email" id="email" name="email" required placeholder="you@email.com">
+      </div>
+      <div class="form-group">
+        <label for="message">Why do you want to volunteer?*</label>
+        <textarea id="message" name="message" required placeholder="Tell us why you want to join..."></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Basti ki Pathshala. Empowering Dreams.
+  </footer>
+</body>
+</html>
